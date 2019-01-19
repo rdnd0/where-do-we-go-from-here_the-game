@@ -9,9 +9,9 @@ var splashScreen;
 var gameScreen;
 var endScreen;
 
-var mainText = document.querySelector('.maintext');
-var option1Text = document.querySelector('.chooseopt1');
-var option2Text = document.querySelector('.chooseopt2');
+var mainText;
+var option1Text;
+var option2Text;
 ////////////////////////////DOM manipulation
 
 //Initial DOM set up
@@ -62,6 +62,7 @@ function buildGameScreen(){
             It is the first day of your life, you are walking down the street, something whatever bla bla
             Ain't easy to be like you, but you are doing all right.
             </p>
+            <p>...................</p>
             <p>What would you do?</p>
     </article>
     <div class="spacing"></div>
@@ -71,7 +72,18 @@ function buildGameScreen(){
         <button class="chooseopt2 btn-options">This text is to decide what happens when choosing option one. Should not be that long else is gonna be ugly.</button>
     </article>`);
 
+    mainText = gameScreen.querySelector('.maintext');
+    option1Text = gameScreen.querySelector('.chooseopt1');
+    option2Text = gameScreen.querySelector('.chooseopt2');
 
+    
+
+    mainText.innerText = game.currentText;
+    option1Text.innerText = game.currentOpt1;
+    option2Text.innerHTML = game.currentOpt2;
+
+    option1Text.addEventListener('click', function(){whereDoWeGoFromHere(1)});
+    option2Text.addEventListener('click', function(){whereDoWeGoFromHere(2)});
 }
 
 function destroyGameScreen(){
@@ -80,8 +92,19 @@ function destroyGameScreen(){
 
 function startGameClick(){
   destroySplashScreen();
+  game.updateStoryStep();
   buildGameScreen();
+  console.log('main screen loaded for the first time')
   
+}
+
+function whereDoWeGoFromHere(option){
+  option === 1 ? game.moveForward(1) : game.moveForward(2);
+  game.updateStoryStep();
+  console.log('main screen about to be loaded, NOT for the first time')
+  mainText.innerText = game.currentText;
+  option1Text.innerText = game.currentOpt1;
+  option2Text.innerHTML = game.currentOpt2;
 }
 
 //Build and destroy End screen
@@ -108,23 +131,6 @@ function loadGame(){
   console.log('start making some decisions');
   buildSplashScreen();
 }
-
-//initial screen set up
-
- //need logic here with game screen variable for the next actions
- game.updateStoryStep();
- 
- mainText.innerHTML('test to see it works');
- 
-//  mainText.innerHTML(game.currentTxt);
- option1Text.innerHTML(game.option1Text);
- option2Text.innerHTML(game.option2Text);
-
-mainText
-option1Text
-option2Text
-
-//pressing main screen buttons
 
 
 //this is so it loads game when the page is finished loading
