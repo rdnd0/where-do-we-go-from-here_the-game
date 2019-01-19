@@ -1,0 +1,82 @@
+/* ---- reset ---- */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, ul {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* game area */
+.container {
+  min-height: 80vh;
+  width: 80vw;
+  margin: 4rem auto;
+  background-color: rgb(219, 207, 207);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+h1{
+  font-family: 'Gloria Hallelujah', cursive;
+  text-transform: uppercase;
+}
+
+p{
+  font-family: 'Gaegu', cursive;
+  text-align: justify;
+  margin: 0 1rem;
+  font-size: 1.5rem;
+}
+
+article{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 15rem;
+  
+}
+
+.button{
+  margin-top: 2rem;
+  text-decoration: none;
+  border-radius: 1.2rem;
+  background-color: grey;
+  color: white;
+  padding: 1rem;
+  font-family: 'Gloria Hallelujah', cursive;
+  text-transform: uppercase;
+  
+}
+
+.btn-options{
+  margin-top: 0.5rem;
+  text-decoration: none;
+  border-radius: 1.1rem;
+  background-color: grey;
+  color: white;
+  padding: 1rem;
+  min-height: 4rem;
+  font-family: 'Gaegu', cursive;
+  font-size: 1rem;
+  text-align: left;
+
+}
+
+.spacing{
+  padding: 1rem;
+}
+
+
+.link{
+  color: black;
+}
