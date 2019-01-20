@@ -62,7 +62,7 @@ function buildGameScreen(){
             It is the first day of your life, you are walking down the street, something whatever bla bla
             Ain't easy to be like you, but you are doing all right.
             </p>
-            <p>...................</p>
+            <p>.......................</p>
             <p>What would you do?</p>
     </article>
     <div class="spacing"></div>
@@ -94,26 +94,44 @@ function startGameClick(){
   destroySplashScreen();
   game.updateStoryStep();
   buildGameScreen();
-  console.log('main screen loaded for the first time')
   
 }
 
 function whereDoWeGoFromHere(option){
   option === 1 ? game.moveForward(1) : game.moveForward(2);
+  if (game.storyPosition === 'E') {
+    destroyGameScreen();
+    game.updateStoryStep();
+    buildEndScreen();
+  }
+  else { 
   game.updateStoryStep();
-  console.log('main screen about to be loaded, NOT for the first time')
   mainText.innerText = game.currentText;
   option1Text.innerText = game.currentOpt1;
   option2Text.innerHTML = game.currentOpt2;
+  console.log(`current story position: ${game.storyPosition}`)
+  }
 }
 
 //Build and destroy End screen
 
 function buildEndScreen(){
   endScreen = buildDom( 
-  '//code for end screen');
+    `<h1></h1>
+    <article>
+            <p class= "maintext">
+            This is the end, my only friend, the end, beautiful friend, the end, the end, theeeeee eeeeeendddd...
+            </p>
+            <p>.......................</p>
+            <p>Thanks for playing</p>
+    </article>
+    <div class="spacing"></div>
 
-  endScreen.querySelector('.restart').addEventListener('click', restartGame)
+    <article>
+    <a href="#" id="restart" class="button">Restart</a>
+    </article>`);
+
+  endScreen.querySelector('#restart').addEventListener('click', restartGame)
 }
 
 function destroyEndScreen(){

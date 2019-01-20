@@ -47,30 +47,52 @@ function Game(){
     '7I have decided to choose option1 rather than number2, I think this makes sense and I hope you approve', 
     '7Hey, I have decided to choose option2 rather than number1, I think this makes sense and I hope you approve');
 
+  var End = new Story(
+    'And that is it, remember to hidrate yourself and keep learning every day. Thanks for playing!'
+  )
 
 
-  this.stories.push(story1, story2, story3, story4, story5, story6, story7);
+
+  this.stories.push(story1, story2, story3, story4, story5, story6, story7, End);
 }
 
 
 
 //the function parameter option chose should be passed in the main screen when the event listener click happens
 Game.prototype.moveForward = function(optionChosen){
+  var outOfBounds = this.storyPosition * 2;
   if (optionChosen === 1){
-    this.storyPosition *= 2; //As there are 2 options, meaning 2 stories per each story.
-  }
+    if (outOfBounds > this.stories.length-1) {
+      console.log('Game Over');
+      this.storyPosition = 'E'
+    }
+    else{ 
+    this.storyPosition *= 2; //As there are 2 options, meaning 2 sub-stories per each story.
+  }}
   else if (optionChosen === 2){
-    this.storyPosition = (this.storyPosition*2)+1;
+    if ((outOfBounds+1) > this.stories.length-1) {
+      console.log('Game Over2');
+      this.storyPosition = 'E'
+    }
+    else{ 
+    this.storyPosition = (this.storyPosition*2)+1;}
   }
   else {
-    console.log('you have an error when choosing story')
+    console.log('you have an error when choosing story');
   }
 
 }
 
 Game.prototype.updateStoryStep = function(){
+  if (this.storyPosition === 'E'){
+  this.currentText = this.stories[this.stories.length-1].text;
+  this.currentOpt1 = "";
+  this.currentOpt2 = ""; 
+
+  }
+  else{ 
   this.currentText = this.stories[this.storyPosition-1].text;
   this.currentOpt1 = this.stories[this.storyPosition-1].decision1;
   this.currentOpt2 = this.stories[this.storyPosition-1].decision2;
-  
+  }
 }
