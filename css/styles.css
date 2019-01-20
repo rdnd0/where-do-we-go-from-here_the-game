@@ -17,7 +17,7 @@ body, ul {
 .container {
   min-height: 80vh;
   width: 80vw;
-  margin: 4rem auto;
+  margin: 2rem auto;
   background-color: rgb(219, 207, 207);
   display: flex;
   justify-content: center;
@@ -79,4 +79,9 @@ article{
 
 .link{
   color: black;
+}
+
+.image {
+  max-height: 21vw;
+  max-width: 27vw;
 }

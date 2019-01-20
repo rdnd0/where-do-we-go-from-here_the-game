@@ -8,7 +8,7 @@ var game = new Game();
 var splashScreen;
 var gameScreen;
 var endScreen;
-
+var img;
 var mainText;
 var option1Text;
 var option2Text;
@@ -31,7 +31,6 @@ function destroyDom(target){
 function buildSplashScreen(){
   splashScreen = buildDom(
     `<h1>this could be you...</h1>
-
     <article>
       <p>
       This game is about making decisions, there is no time limit as I did
@@ -56,14 +55,16 @@ function destroySplashScreen(){
 //Build and destroy Game screen
 
 function buildGameScreen(){
-  gameScreen = buildDom(`<h1></h1>
-    <article>
-            <p class= "maintext">
-            It is the first day of your life, you are walking down the street, something whatever bla bla
-            Ain't easy to be like you, but you are doing all right.
-            </p>
-            <p>.......................</p>
-            <p>What would you do?</p>
+  gameScreen = buildDom(`
+  <img src="images/balls.png" class="image"> 
+  <div class="spacing"></div> 
+  <article>
+      <p class= "maintext">
+      It is the first day of your life, you are walking down the street, something whatever bla bla
+      Ain't easy to be like you, but you are doing all right.
+      </p>
+      <p>.......................</p>
+      <p>What would you do?</p>
     </article>
     <div class="spacing"></div>
 
@@ -75,9 +76,11 @@ function buildGameScreen(){
     mainText = gameScreen.querySelector('.maintext');
     option1Text = gameScreen.querySelector('.chooseopt1');
     option2Text = gameScreen.querySelector('.chooseopt2');
+    img = gameScreen.querySelector('.image');
+
 
     
-
+    img.src = "images/desparpajo.jpg";
     mainText.innerText = game.currentText;
     option1Text.innerText = game.currentOpt1;
     option2Text.innerHTML = game.currentOpt2;
@@ -106,6 +109,7 @@ function whereDoWeGoFromHere(option){
   }
   else { 
   game.updateStoryStep();
+  img.src = 'images/strawberryfieldsfe.png'
   mainText.innerText = game.currentText;
   option1Text.innerText = game.currentOpt1;
   option2Text.innerHTML = game.currentOpt2;
