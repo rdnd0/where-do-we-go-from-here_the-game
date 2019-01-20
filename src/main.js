@@ -141,6 +141,7 @@ function destroyEndScreen(){
 function restartGame(){
   destroyEndScreen();
   buildSplashScreen();
+  game.storyPosition = 1;
 
 }
 
