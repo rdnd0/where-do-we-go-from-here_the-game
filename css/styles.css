@@ -85,3 +85,11 @@ article{
   max-height: 21vw;
   max-width: 27vw;
 }
+
+#name{
+  width : 27vw;
+  height: 5vh;
+  font-family: 'Gaegu';
+  font-size: 1.6rem;
+  text-align: center;
+}

@@ -2,7 +2,7 @@
 
 var story = new Story();
 
-function Game(){
+function Game(playername){
   this.storyPosition = 1;
   this.stories = [];
   this.currentText;
@@ -10,12 +10,13 @@ function Game(){
   this.currentOpt2;
   this.currentImage;
   this.images = ['images/story1.png', 'images/story2.png','images/story3.png','images/story4.png','images/story5.png','images/story6.png','images/story7.png','images/story8.png',];
+  this.playerName = playername ;
 
 
   
   
   var story1 = new Story(
-  'It is the FIRST day of your life, you are walking down the street, something whatever bla bla, not easy to be like you, but you are doing all right.',
+  `${this.playerName} It is the FIRST day of your life, you are walking down the street, something whatever bla bla, not easy to be like you, but you are doing all right.`,
   '1I have decided to choose option1 rather than number2, I think this makes sense and I hope you approve', 
   '1Hey, I have decided to choose option2 rather than number1, I think this makes sense and I hope you approve');
   
