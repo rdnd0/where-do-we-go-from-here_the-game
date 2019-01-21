@@ -34,19 +34,19 @@ function main() {
     splashScreen = buildDom(
       `<h1>Hola amig@!</h1>
       <p>First things first,  what is your name?</p>
-      <input type ='text' id='name'>
+      <input type ='text' id='name' required>
       <div class="spacing"></div>
       <article>
       <p>
       This game is about making decisions, there is no time limit as I did
       not have time to code it.
       </p>
-      <p>Our future is just our present plus the decisions we make.</p>
+      <p>Remember: the future is just our present plus the decisions we make.</p>
       <p>Choose wisely, enjoy and remember to donate.</p>
       </article>
       
       <a href="#" id="start" class="button">Let's do this</a>
-      <a href="#" class="link">donate</a>`
+      <a href="https://www.linkedin.com/in/davidredondo83/" target="_blank" class="link">donate</a>`
       );
       
       playerName = document.querySelector('#name');
@@ -130,7 +130,6 @@ function main() {
     mainText.innerText = game.currentText;
     option1Text.innerText = game.currentOpt1;
     option2Text.innerHTML = game.currentOpt2;
-    console.log(`current story position: ${game.storyPosition}`)
     }
   }
   
@@ -168,7 +167,6 @@ function main() {
   
   //initial function to load the game
   function loadGame(){
-    console.log('start making some decisions');
     buildSplashScreen();
   }
 

@@ -9,7 +9,7 @@ function Game(playername){
   this.currentOpt1;
   this.currentOpt2;
   this.currentImage;
-  this.images = ['images/story1.png', 'images/story2.png','images/story3.png','images/story4.png','images/story5.png','images/story6.png','images/story7.png','images/story8.png',];
+  this.images = ['images/story1.png', 'images/story2.png','images/story3.png','images/story4.png','images/story5.png','images/story6.png','images/story7.png','images/story8.png','images/story9.png', 'images/story10.png','images/story11.png','images/story12.png','images/story13.png','images/story14.png','images/story15.png'];
   this.playerName = playername ;
 
 
@@ -50,13 +50,52 @@ function Game(playername){
     '7I have decided to choose option1 rather than number2, I think this makes sense and I hope you approve', 
     '7Hey, I have decided to choose option2 rather than number1, I think this makes sense and I hope you approve');
 
+  var story8 = new Story(
+    'It is the EIGHT day of your life, you are walking down the street, something whatever bla bla, not easy to be like you, but you are doing all right.',
+    '8I have decided to choose option1 rather than number2, I think this makes sense and I hope you approve', 
+    '8Hey, I have decided to choose option2 rather than number1, I think this makes sense and I hope you approve');
+  var story9 = new Story(
+    `${this.playerName} It is the NINTH day of your life, you are walking down the street, something whatever bla bla, not easy to be like you, but you are doing all right.`,
+    '9I have decided to choose option1 rather than number2, I think this makes sense and I hope you approve', 
+    '9Hey, I have decided to choose option2 rather than number1, I think this makes sense and I hope you approve');
+    
+  var story10 = new Story(
+    'It is the TENTH day of your life, you are walking down the street, something whatever bla bla, not easy to be like you, but you are doing all right.',
+    '10I have decided to choose option1 rather than number2, I think this makes sense and I hope you approve', 
+    '10Hey, I have decided to choose option2 rather than number1, I think this makes sense and I hope you approve');
+    
+  var story11 = new Story(
+    'It is the ELEVENTH day of your life, you are walking down the street, something whatever bla bla, not easy to be like you, but you are doing all right.',
+    '11I have decided to choose option1 rather than number2, I think this makes sense and I hope you approve', 
+    '11Hey, I have decided to choose option2 rather than number1, I think this makes sense and I hope you approve');
+  
+  var story12 = new Story(
+    'It is the TWELVETH day of your life, you are walking down the street, something whatever bla bla, not easy to be like you, but you are doing all right.',
+    '12I have decided to choose option1 rather than number2, I think this makes sense and I hope you approve', 
+    '12Hey, I have decided to choose option2 rather than number1, I think this makes sense and I hope you approve');
+
+  var story13 = new Story(
+    'It is the THIRTEENTH day of your life, you are walking down the street, something whatever bla bla, not easy to be like you, but you are doing all right.',
+    '13I have decided to choose option1 rather than number2, I think this makes sense and I hope you approve', 
+    '13Hey, I have decided to choose option2 rather than number1, I think this makes sense and I hope you approve');
+
+  var story14 = new Story(
+    'It is the FOURTEENTH day of your life, you are walking down the street, something whatever bla bla, not easy to be like you, but you are doing all right.',
+    '14I have decided to choose option1 rather than number2, I think this makes sense and I hope you approve', 
+    '14Hey, I have decided to choose option2 rather than number1, I think this makes sense and I hope you approve');
+
+  var story15 = new Story(
+    'It is the FIFTEENTH day of your life, you are walking down the street, something whatever bla bla, not easy to be like you, but you are doing all right.',
+    '15I have decided to choose option1 rather than number2, I think this makes sense and I hope you approve', 
+    '15Hey, I have decided to choose option2 rather than number1, I think this makes sense and I hope you approve');
+
   var End = new Story(
     'And that is it, remember to hidrate yourself and keep learning every day. Thanks for playing!'
   )
 
 
 
-  this.stories.push(story1, story2, story3, story4, story5, story6, story7, End);
+  this.stories.push(story1, story2, story3, story4, story5, story6, story7, story8, story9, story10, story11, story12, story13, story14, story15, End);
 }
 
 
