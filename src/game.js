@@ -8,6 +8,8 @@ function Game(){
   this.currentText;
   this.currentOpt1;
   this.currentOpt2;
+  this.currentImage;
+  this.images = ['images/story1.png', 'images/story2.png','images/story3.png','images/story4.png','images/story5.png','images/story6.png','images/story7.png','images/story8.png',];
 
 
   
@@ -63,7 +65,6 @@ Game.prototype.moveForward = function(optionChosen){
   var outOfBounds = this.storyPosition * 2;
   if (optionChosen === 1){
     if (outOfBounds > this.stories.length-1) {
-      console.log('Game Over');
       this.storyPosition = 'E'
     }
     else{ 
@@ -71,14 +72,10 @@ Game.prototype.moveForward = function(optionChosen){
   }}
   else if (optionChosen === 2){
     if ((outOfBounds+1) > this.stories.length-1) {
-      console.log('Game Over2');
       this.storyPosition = 'E'
     }
     else{ 
     this.storyPosition = (this.storyPosition*2)+1;}
-  }
-  else {
-    console.log('you have an error when choosing story');
   }
 
 }
@@ -86,11 +83,13 @@ Game.prototype.moveForward = function(optionChosen){
 Game.prototype.updateStoryStep = function(){
   if (this.storyPosition === 'E'){
   this.currentText = this.stories[this.stories.length-1].text;
+  this.currentImage = this.images[this.images.length-1];
   this.currentOpt1 = "";
   this.currentOpt2 = ""; 
 
   }
   else{ 
+  this.currentImage = this.images[this.storyPosition-1];
   this.currentText = this.stories[this.storyPosition-1].text;
   this.currentOpt1 = this.stories[this.storyPosition-1].decision1;
   this.currentOpt2 = this.stories[this.storyPosition-1].decision2;

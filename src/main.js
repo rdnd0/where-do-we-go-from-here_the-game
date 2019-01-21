@@ -12,6 +12,8 @@ var img;
 var mainText;
 var option1Text;
 var option2Text;
+var endText;
+var endImg;
 ////////////////////////////DOM manipulation
 
 //Initial DOM set up
@@ -56,7 +58,7 @@ function destroySplashScreen(){
 
 function buildGameScreen(){
   gameScreen = buildDom(`
-  <img src="images/balls.png" class="image"> 
+  <img src="" class="image"> 
   <div class="spacing"></div> 
   <article>
       <p class= "maintext">
@@ -80,7 +82,7 @@ function buildGameScreen(){
 
 
     
-    img.src = "images/desparpajo.jpg";
+    img.src = game.currentImage;
     mainText.innerText = game.currentText;
     option1Text.innerText = game.currentOpt1;
     option2Text.innerHTML = game.currentOpt2;
@@ -104,12 +106,17 @@ function whereDoWeGoFromHere(option){
   option === 1 ? game.moveForward(1) : game.moveForward(2);
   if (game.storyPosition === 'E') {
     destroyGameScreen();
-    game.updateStoryStep();
     buildEndScreen();
+    game.updateStoryStep();
+    endText = endScreen.querySelector('.maintext');
+    endImg = endScreen.querySelector('.image');
+    endImg.src = game.currentImage;
+    endText.innerText = game.currentText;
+   
   }
   else { 
   game.updateStoryStep();
-  img.src = 'images/strawberryfieldsfe.png'
+  img.src = game.currentImage;
   mainText.innerText = game.currentText;
   option1Text.innerText = game.currentOpt1;
   option2Text.innerHTML = game.currentOpt2;
@@ -121,7 +128,8 @@ function whereDoWeGoFromHere(option){
 
 function buildEndScreen(){
   endScreen = buildDom( 
-    `<h1></h1>
+    `<img src="" class="image"> 
+    <div class="spacing"></div> 
     <article>
             <p class= "maintext">
             This is the end, my only friend, the end, beautiful friend, the end, the end, theeeeee eeeeeendddd...
@@ -134,6 +142,7 @@ function buildEndScreen(){
     <article>
     <a href="#" id="restart" class="button">Restart</a>
     </article>`);
+
 
   endScreen.querySelector('#restart').addEventListener('click', restartGame)
 }
