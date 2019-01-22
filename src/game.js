@@ -16,78 +16,95 @@ function Game(playername){
   
   
   var story1 = new Story(
-  `${this.playerName} It is the FIRST day of your life, you are walking down the street, something whatever bla bla, not easy to be like you, but you are doing all right.`,
-  '1I have decided to choose option1 rather than number2, I think this makes sense and I hope you approve', 
-  '1Hey, I have decided to choose option2 rather than number1, I think this makes sense and I hope you approve');
+  `Oh ${this.playerName}, how beautiful is this? You feel so good. What a lovely spring day, it is sunset time. You can even hear a stream of water, birds are chirping... 
+  Wait why does that bird sound different?
+  BEEEP BEEEP BEEEP BEEEP It's 7AM and your alarm clock is on fire... Crap...`,
+  'I am tired, I rather go back to the sunset and sleep', 
+  'I jump out of bed and rush to the shower, it is gonna be a great day (even if it does not look like it right now)');
   
-  var story2 = new Story(
-  'It is the SECOND day of your life, you are walking down the street, something whatever bla bla, not easy to be like you, but you are doing all right.',
-  '2I have decided to choose option1 rather than number2, I think this makes sense and I hope you approve', 
-  '2Hey, I have decided to choose option2 rather than number1, I think this makes sense and I hope you approve');
+  var story2 = new Story(); //this player is dead
   
   var story3 = new Story(
-  'It is the THIRD day of your life, you are walking down the street, something whatever bla bla, not easy to be like you, but you are doing all right.',
-  '3I have decided to choose option1 rather than number2, I think this makes sense and I hope you approve', 
-  '3Hey, I have decided to choose option2 rather than number1, I think this makes sense and I hope you approve');
+  'After eating some oatmeal you get out. It is a cold gray day, people in the street seem sad. After some walking, you finally arrive at IronHack. Looks like the door is slightly open and there is a dog chewing on something, too dark to know what it is. The canine is blocking your way and staring right at you.',
+  'I go ahead, what is the worst thing that can happen anyways?', 
+  'I am not sure about this, I rather stay here, someone will come at some point');
 
-  var story4 = new Story(
-    'It is the FOURTH day of your life, you are walking down the street, something whatever bla bla, not easy to be like you, but you are doing all right.',
-    '4I have decided to choose option1 rather than number2, I think this makes sense and I hope you approve', 
-    '4Hey, I have decided to choose option2 rather than number1, I think this makes sense and I hope you approve');
+  var story4 = new Story();//this player is dead
 
-  var story5 = new Story(
-    'It is the FIFTH day of your life, you are walking down the street, something whatever bla bla, not easy to be like you, but you are doing all right.',
-    '5I have decided to choose option1 rather than number2, I think this makes sense and I hope you approve', 
-    '5Hey, I have decided to choose option2 rather than number1, I think this makes sense and I hope you approve');
+  var story5 = new Story();//this player is dead
 
   var story6 = new Story(
-    'It is the SIXTH day of your life, you are walking down the street, something whatever bla bla, not easy to be like you, but you are doing all right.',
-    '6I have decided to choose option1 rather than number2, I think this makes sense and I hope you approve', 
-    '6Hey, I have decided to choose option2 rather than number1, I think this makes sense and I hope you approve');
+    `As you enter the building the dog stares at you and kind of smiles, his name is Loki and his behavior is exemplary, phewww all is good... 
+    You look at your classroom and it looks like there is no one there... Not even Mike...`,
+    `I go there, I can sit for a while and cry by myself, because I don't understand anything and other personal stuff (no point in opening up in here).`, 
+    `I rather go to the restroom and cry, it feels more natural`);
 
   var story7 = new Story(
-    'It is the SEVENTH day of your life, you are walking down the street, something whatever bla bla, not easy to be like you, but you are doing all right.',
-    '7I have decided to choose option1 rather than number2, I think this makes sense and I hope you approve', 
-    '7Hey, I have decided to choose option2 rather than number1, I think this makes sense and I hope you approve');
+    `Darn, It's freezing out there! You heard about frostbite on TV and your paranoia is taking the best out of you, are you holding up ok?`,
+    `F*ck it, I am going in, I will just take out my food in case I need to use it as distraction`, 
+    `Meh I rather go home, this is not for me and I really want to keep all my toes. They made me look good with flip-flops.`);
 
-  var story8 = new Story(
-    'It is the EIGHT day of your life, you are walking down the street, something whatever bla bla, not easy to be like you, but you are doing all right.',
-    '8I have decided to choose option1 rather than number2, I think this makes sense and I hope you approve', 
-    '8Hey, I have decided to choose option2 rather than number1, I think this makes sense and I hope you approve');
-  var story9 = new Story(
-    `${this.playerName} It is the NINTH day of your life, you are walking down the street, something whatever bla bla, not easy to be like you, but you are doing all right.`,
-    '9I have decided to choose option1 rather than number2, I think this makes sense and I hope you approve', 
-    '9Hey, I have decided to choose option2 rather than number1, I think this makes sense and I hope you approve');
-    
-  var story10 = new Story(
-    'It is the TENTH day of your life, you are walking down the street, something whatever bla bla, not easy to be like you, but you are doing all right.',
-    '10I have decided to choose option1 rather than number2, I think this makes sense and I hope you approve', 
-    '10Hey, I have decided to choose option2 rather than number1, I think this makes sense and I hope you approve');
-    
-  var story11 = new Story(
-    'It is the ELEVENTH day of your life, you are walking down the street, something whatever bla bla, not easy to be like you, but you are doing all right.',
-    '11I have decided to choose option1 rather than number2, I think this makes sense and I hope you approve', 
-    '11Hey, I have decided to choose option2 rather than number1, I think this makes sense and I hope you approve');
+  var story8 = new Story();
+  var story9 = new Story();
+  var story10 = new Story();
+  var story11 = new Story();
   
   var story12 = new Story(
-    'It is the TWELVETH day of your life, you are walking down the street, something whatever bla bla, not easy to be like you, but you are doing all right.',
-    '12I have decided to choose option1 rather than number2, I think this makes sense and I hope you approve', 
-    '12Hey, I have decided to choose option2 rather than number1, I think this makes sense and I hope you approve');
+    `The class seems to be empty at first sight, but under the table there is a lot of movement. 
+    You guys are not supposed to have parties in here, specially under the table.
+    Are you dreaming, why is all this happening today?`,
+    `That's enough, I think I forgot something at home. Tomorrow will be another day.`, 
+    `The cemetery is full of brave people, but it is full of cowards as well. We are all gonna die at some point. I'm gonna check!`);
 
   var story13 = new Story(
-    'It is the THIRTEENTH day of your life, you are walking down the street, something whatever bla bla, not easy to be like you, but you are doing all right.',
-    '13I have decided to choose option1 rather than number2, I think this makes sense and I hope you approve', 
-    '13Hey, I have decided to choose option2 rather than number1, I think this makes sense and I hope you approve');
+    `Everything is dark and there's sound of water, where is the light. I wish I had bought those 
+    night vision glasses from amazon.`,
+    `I rather go to class, crying in the bathroom is overrated`, //26
+    `I really need to go, now for other reasons`); //27
 
-  var story14 = new Story(
-    'It is the FOURTEENTH day of your life, you are walking down the street, something whatever bla bla, not easy to be like you, but you are doing all right.',
-    '14I have decided to choose option1 rather than number2, I think this makes sense and I hope you approve', 
-    '14Hey, I have decided to choose option2 rather than number1, I think this makes sense and I hope you approve');
-
-  var story15 = new Story(
-    'It is the FIFTEENTH day of your life, you are walking down the street, something whatever bla bla, not easy to be like you, but you are doing all right.',
-    '15I have decided to choose option1 rather than number2, I think this makes sense and I hope you approve', 
-    '15Hey, I have decided to choose option2 rather than number1, I think this makes sense and I hope you approve');
+  var story14 = new Story();
+  var story15 = new Story();
+  var story16 = new Story();
+  var story17 = new Story();
+  var story18 = new Story();
+  var story19 = new Story();
+  var story20 = new Story();
+  var story21 = new Story();
+  var story22 = new Story();
+  var story23 = new Story();
+  var story24 = new Story();
+  var story25 = new Story(
+    `As you come through the door you see it, all your wonderful colleagues pop out from under the table and say: "Congratulations ${namehere} you are so close, you are about to graduate from IronHack.. only one question to go, in which naming convention is this written: camel_case`,
+    `This is clearly camel case, I use it all the time`,
+    `This is snake case and I love this notation, even if I am afraid of them.`
+  );
+  var story26 = new Story();
+  var story27 = new Story();
+  var story28 = new Story();
+  var story29 = new Story();
+  var story30 = new Story();
+  var story31 = new Story();
+  var story32 = new Story();
+  var story33 = new Story();
+  var story34 = new Story();
+  var story35 = new Story();
+  var story36 = new Story();
+  var story37 = new Story();
+  var story38 = new Story();
+  var story39 = new Story();
+  var story40 = new Story();
+  var story41 = new Story();
+  var story42 = new Story();
+  var story43 = new Story();
+  var story44 = new Story();
+  var story45 = new Story();
+  var story46 = new Story();
+  var story47 = new Story();
+  var story48 = new Story();
+  var story49 = new Story();
+  var story50 = new Story();
+  var story51 = new Story();
+  var story52 = new Story();
 
   var End = new Story(
     'And that is it, remember to hidrate yourself and keep learning every day. Thanks for playing!'
