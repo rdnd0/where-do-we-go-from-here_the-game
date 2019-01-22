@@ -17,7 +17,7 @@ function Game(playername){
   
   var story1 = new Story(
   `Oh ${this.playerName}, how beautiful is this? You feel so good. What a lovely spring day, it is sunset time. You can even hear a stream of water, birds are chirping... 
-  Wait why does that bird sound different?
+  WAAAAIT! why does that bird sound different?
   BEEEP BEEEP BEEEP BEEEP It's 7AM and your alarm clock is on fire... Crap...`,
   'I am tired, I rather go back to the sunset and sleep', 
   'I jump out of bed and rush to the shower, it is gonna be a great day (even if it does not look like it right now)');
@@ -36,13 +36,13 @@ function Game(playername){
   var story6 = new Story(
     `As you enter the building the dog stares at you and kind of smiles, his name is Loki and his behavior is exemplary, phewww all is good... 
     You look at your classroom and it looks like there is no one there... Not even Mike...`,
-    `I go there, I can sit for a while and cry by myself, because I don't understand anything and other personal stuff (no point in opening up in here).`, 
+    `I go there, I can sit for a while and cry by myself, because I don't understand anything and other personal stuff (no point in opening  that door up in here)`, 
     `I rather go to the restroom and cry, it feels more natural`);
 
   var story7 = new Story(
     `Darn, It's freezing out there! You heard about frostbite on TV and your paranoia is taking the best out of you, are you holding up ok?`,
     `F*ck it, I am going in, I will just take out my food in case I need to use it as distraction`, 
-    `Meh I rather go home, this is not for me and I really want to keep all my toes. They made me look good with flip-flops.`);
+    `Meh I rather go home, this is not for me and I really want to keep all my toes. They made me look good with flip-flops`);
 
   var story8 = new Story();
   var story9 = new Story();
@@ -53,12 +53,11 @@ function Game(playername){
     `The class seems to be empty at first sight, but under the table there is a lot of movement. 
     You guys are not supposed to have parties in here, specially under the table.
     Are you dreaming, why is all this happening today?`,
-    `That's enough, I think I forgot something at home. Tomorrow will be another day.`, 
+    `That's enough, I think I forgot something at home. Tomorrow will be another day`, 
     `The cemetery is full of brave people, but it is full of cowards as well. We are all gonna die at some point. I'm gonna check!`);
 
   var story13 = new Story(
-    `Everything is dark and there's sound of water, where is the light. I wish I had bought those 
-    night vision glasses from amazon.`,
+    `Everything is dark and there's sound of water, where is the light. I wish I had bought those night vision glasses from amazon.`,
     `I rather go to class, crying in the bathroom is overrated`, //26
     `I really need to go, now for other reasons`); //27
 
@@ -74,9 +73,10 @@ function Game(playername){
   var story23 = new Story();
   var story24 = new Story();
   var story25 = new Story(
-    `As you come through the door you see it, all your wonderful colleagues pop out from under the table and say: "Congratulations ${namehere} you are so close, you are about to graduate from IronHack.. only one question to go, in which naming convention is this written: camel_case`,
+    `As you come through the door you see it, all your wonderful colleagues pop out from under the table and say: "Congratulations ${this.playerName} you are so close, you are about to graduate from IronHack.. only one question to go, in which naming convention is this written: camel_case. 
+    We need an answer is all or nothing at this point`,
     `This is clearly camel case, I use it all the time`,
-    `This is snake case and I love this notation, even if I am afraid of them.`
+    `This is snake case and I love this notation, even if I am afraid of them`
   );
   var story26 = new Story();
   var story27 = new Story();
@@ -105,14 +105,21 @@ function Game(playername){
   var story50 = new Story();
   var story51 = new Story();
   var story52 = new Story();
+  var endFaint = new Story(
+    'And that is it, remember to hidrate yourself and keep learning every day. Thanks for playing!');
+  var endDrown = new Story(
+    'And that is it, remember to hidrate yourself and keep learning every day. Thanks for playing!');
+  var endBluck = new Story(
+      'And that is it, remember to hidrate yourself and keep learning every day. Thanks for playing!');
+  var endDiploma = new Story(
+        'And that is it, remember to hidrate yourself and keep learning every day. Thanks for playing!');
 
-  var End = new Story(
-    'And that is it, remember to hidrate yourself and keep learning every day. Thanks for playing!'
-  )
 
+    // for (var i = 1 ; i<=52 ; i++){
+    //   this.stories.push(`story${i}`);
+    // }
 
-
-  this.stories.push(story1, story2, story3, story4, story5, story6, story7, story8, story9, story10, story11, story12, story13, story14, story15, End);
+  this.stories.push(story1, story2, story3, story4, story5, story6, story7, story8, story9, story10, story11, story12, story13, story14, story15, story16, story17, story18, story19, story20, story21, story22, story23, story24, story25, story26, story27, story28, story29,story30, story31, story32, story33, story34, story35, story36, story37, story38, story39, story40, story41, story42, story43, story45, story46, story47, story48, story49, story50, story51, story52, endFaint, endDrown, endBluck, endDiploma );
 }
 
 
