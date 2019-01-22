@@ -29,9 +29,8 @@ function main() {
   //Build and destroy splash
   function buildSplashScreen() {
     splashScreen = buildDom(
-      `<h1>Hola amig@!</h1>
-      <p>First things first,  what is your name?</p>
-      <input type ='text' id='name' required>
+      `<h1>Hello Friend!</h1>
+      <p>First things first, <input type ='text' id='name' required placeholder="what is your name?"></p>
       <div class="spacing"></div>
       <article>
       <p>
@@ -122,12 +121,13 @@ function main() {
       buildEndScreen();
       endText = endScreen.querySelector(".maintext");
       endImg = endScreen.querySelector(".image");
-      endImg.src = game.images[7]//need to select image for faint end
-      endText.innerText = game.stories[7].text;//need to select text for faint end
+      endImg.src = game.images[52]//need to select image for faint end
+      endText.innerText = game.stories[52].text;//need to select text for faint end
     } else if (game.storyPosition === 14) {
       console.log('back to story 6')
       game.storyPosition = 6;
       game.updateStoryStep();
+      img.src = game.currentImage;
       mainText.innerText = game.currentText;
       option1Text.innerText = game.currentOpt1;
       option2Text.innerHTML = game.currentOpt2;
@@ -135,19 +135,39 @@ function main() {
       console.log('back to story 12')
       game.storyPosition = 12;
       game.updateStoryStep();
+      img.src = game.currentImage;
       mainText.innerText = game.currentText;
       option1Text.innerText = game.currentOpt1;
       option2Text.innerHTML = game.currentOpt2;
     } 
     else if (game.storyPosition === 27) {
       //code for drowming
+      destroyGameScreen();
+      buildEndScreen();
+      endText = endScreen.querySelector(".maintext");
+      endImg = endScreen.querySelector(".image");
+      endImg.src = game.images[53];
+      endText.innerText = game.stories[53].text;
       console.log("drowming end");
     }
     else if (game.storyPosition === 50) {
       //code for end 3, try again next time
+      destroyGameScreen();
+      buildEndScreen();
+      endText = endScreen.querySelector(".maintext");
+      endImg = endScreen.querySelector(".image");
+      endImg.src = game.images[54];
+      endText.innerText = game.stories[54].text;
       console.log('try again next time');
     }
     else if (game.storyPosition === 51) {
+      destroyGameScreen();
+      buildEndScreen();
+      endText = endScreen.querySelector(".maintext");
+      endImg = endScreen.querySelector(".image");
+      endImg.src = game.images[55];
+      endText.innerText = "";
+
       console.log('well done, diploma');
     }
     else {

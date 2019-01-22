@@ -26,7 +26,9 @@ body, ul {
 }
 
 h1{
-  font-family: 'Gloria Hallelujah', cursive;
+  /* font-family: 'Gloria Hallelujah', cursive; */
+  font-family: 'Baloo Thambi', cursive;
+  font-size: 3rem;
   text-transform: uppercase;
 }
 
@@ -49,10 +51,11 @@ article{
   margin-top: 2rem;
   text-decoration: none;
   border-radius: 1.2rem;
-  background-color: grey;
+  background-color: black;
   color: white;
   padding: 1rem;
-  font-family: 'Gloria Hallelujah', cursive;
+  /* font-family: 'Gloria Hallelujah', cursive; */
+  font-family: 'Baloo Thambi', cursive;
   text-transform: uppercase;
   
 }
@@ -66,12 +69,13 @@ article{
   margin-top: 0.5rem;
   text-decoration: none;
   border-radius: 1.1rem;
-  background-color: grey;
-  color: white;
+  background-color: pink;
+  color: black;
   padding: 1rem;
   min-height: 4rem;
-  font-family: 'Gaegu', cursive;
-  font-size: 1.2rem;
+  font-family: 'Baloo Thambi', cursive;
+  /* font-family: 'Gaegu', cursive; */
+  font-size: 1rem;
   text-align: left;
 
 }
@@ -81,8 +85,8 @@ article{
 }
 
 .btn-options:hover{
-  background-color: pink;
-  color: black;
+  background-color: black;
+  color: white;
 }
 
 .spacing{
@@ -92,6 +96,13 @@ article{
 
 .link{
   color: black;
+  font-family: 'Baloo Thambi', cursive;
+}
+
+.link:hover{
+  color: pink;
+  font-family: 'Baloo Thambi', cursive;
+
 }
 
 .image {
@@ -100,12 +111,15 @@ article{
 }
 
 #name{
-  width : 27vw;
+  width : 22vw;
   height: 5vh;
   font-family: 'Gaegu';
   font-size: 1.6rem;
-  text-align: center;
-  border-radius: 0.5rem;
+  text-align: left;
+  outline: 0;
+  border-width: 0 0 2px;
+  border-bottom-color: pink;
+  
 }
 
 #name:focus{

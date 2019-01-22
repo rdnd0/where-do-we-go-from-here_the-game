@@ -9,14 +9,14 @@ function Game(playername){
   this.currentOpt1;
   this.currentOpt2;
   this.currentImage;
-  this.images = ['images/story1.png', 'images/story2.png','images/story3.png','images/story4.png','images/story5.png','images/story6.png','images/story7.png','images/story8.png','images/story9.png', 'images/story10.png','images/story11.png','images/story12.png','images/story13.png','images/story14.png','images/story15.png'];
+  this.images = ["images/story1.png", "images/story2.png",   "images/story3.png",  "images/story4.png",  "images/story5.png",  "images/story6.png",  "images/story7.png",  "images/story8.png",  "images/story9.png",  "images/story10.png",   "images/story11.png",  "images/story12.png",  "images/story13.png",  "images/story14.png",  "images/story15.png",  "images/story16.png",  "images/story17.png",   "images/story18.png",  "images/story19.png",  "images/story20.png",  "images/story21.png",  "images/story22.png",  "images/story23.png",  "images/story24.png",  "images/story25.png",  "images/story26.png",  "images/story27.png",  "images/story28.png",  "images/story29.png",   "images/story30.png",  "images/story31.png",   "images/story32.png",  "images/story33.png",  "images/story34.png",  "images/story35.png",  "images/story36.png",  "images/story37.png",  "images/story38.png",  "images/story39.png",  "images/story40.png",  "images/story41.png",  "images/story42.png",  "images/story43.png",  "images/story44.png",  "images/story45.png",  "images/story46.png",  "images/story47.png",  "images/story48.png",  "images/story49.png",  "images/story50.png",  "images/story51.png",  "images/story52.png",  "images/story53.png",  "images/story54.png",  "images/story55.png", "images/story56.png"];
   this.playerName = playername ;
 
 
   
   
   var story1 = new Story(
-  `Oh ${this.playerName}, how beautiful is this? You feel so good. What a lovely spring day, it is sunset time. You can even hear a stream of water, birds are chirping... 
+  `Oh ${this.playerName}, isn't this lovely? You feel so good. What a lovely spring day, it is sunset time. You can even hear a stream of water, birds are chirping... 
   WAAAAIT! why does that bird sound different?
   BEEEP BEEEP BEEEP BEEEP It's 7AM and your alarm clock is on fire... Crap...`,
   'I am tired, I rather go back to the sunset and sleep', 
@@ -42,7 +42,7 @@ function Game(playername){
   var story7 = new Story(
     `Darn, It's freezing out there! You heard about frostbite on TV and your paranoia is taking the best out of you, are you holding up ok?`,
     `F*ck it, I am going in, I will just take out my food in case I need to use it as distraction`, 
-    `Meh I rather go home, this is not for me and I really want to keep all my toes. They made me look good with flip-flops`);
+    `Meh I rather go home, this is not for me and I really want to keep all my toes. They make me look good with flip-flops`);
 
   var story8 = new Story();
   var story9 = new Story();
@@ -73,10 +73,11 @@ function Game(playername){
   var story23 = new Story();
   var story24 = new Story();
   var story25 = new Story(
-    `As you come through the door you see it, all your wonderful colleagues pop out from under the table and say: "Congratulations ${this.playerName} you are so close, you are about to graduate from IronHack.. only one question to go, in which naming convention is this written: camel_case. 
-    We need an answer is all or nothing at this point`,
+    `As you come through the door you see it, all your wonderful colleagues pop out from under the table and say: "Congratulations ${this.playerName} you are so close, you are about to graduate from IronHack... Only one question to go, in which naming convention is this written? 
+    camel_case 
+    We need an answer is all or nothing at this point.`,
     `This is clearly camel case, I use it all the time`,
-    `This is snake case and I love this notation, even if I am afraid of them`
+    `This is snake case and I love this notation, even if I am afraid of snakes`
   );
   var story26 = new Story();
   var story27 = new Story();
@@ -106,11 +107,12 @@ function Game(playername){
   var story51 = new Story();
   var story52 = new Story();
   var endFaint = new Story(
-    'And that is it, remember to hidrate yourself and keep learning every day. Thanks for playing!');
+    `${this.playerName}, you ain't going nowhere with that attitude! Sorry, you are out.`);
   var endDrown = new Story(
-    'And that is it, remember to hidrate yourself and keep learning every day. Thanks for playing!');
+    `There's been a problem with the plumbing, there is water everywhere... Floki seems to be ok swimming around, but I do not know how to. You pass away of terrible death, suffering like ever in your life.`);
   var endBluck = new Story(
-      'And that is it, remember to hidrate yourself and keep learning every day. Thanks for playing!');
+      `It is actually snake case, what were you thinking? 
+      That automatically puts you back into square 1. See you in the next cohort. (Just to be clear, you will have to pay that).`);
   var endDiploma = new Story(
         'And that is it, remember to hidrate yourself and keep learning every day. Thanks for playing!');
 
@@ -118,8 +120,7 @@ function Game(playername){
     // for (var i = 1 ; i<=52 ; i++){
     //   this.stories.push(`story${i}`);
     // }
-
-  this.stories.push(story1, story2, story3, story4, story5, story6, story7, story8, story9, story10, story11, story12, story13, story14, story15, story16, story17, story18, story19, story20, story21, story22, story23, story24, story25, story26, story27, story28, story29,story30, story31, story32, story33, story34, story35, story36, story37, story38, story39, story40, story41, story42, story43, story45, story46, story47, story48, story49, story50, story51, story52, endFaint, endDrown, endBluck, endDiploma );
+  this.stories.push(story1, story2, story3, story4, story5, story6, story7, story8, story9, story10, story11, story12, story13, story14, story15, story16, story17, story18, story19, story20, story21, story22, story23, story24, story25, story26, story27, story28, story29,story30, story31, story32, story33, story34, story35, story36, story37, story38, story39, story40, story41, story42, story43, story44, story45, story46, story47, story48, story49, story50, story51, story52, endFaint, endDrown, endBluck, endDiploma );
 }
 
 
