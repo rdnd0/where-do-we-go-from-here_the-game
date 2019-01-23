@@ -14,6 +14,8 @@ function main() {
   var endText;
   var endImg;
   var playerName;
+  var endTextDiploma;
+  var endTextName;
   ////////////////////////////DOM manipulation
 
   //Initial DOM set up
@@ -164,6 +166,11 @@ function main() {
     else if (game.storyPosition === 51) {
       destroyGameScreen();
       buildEndScreen2();
+      endTextName = endScreen2.querySelector(".diploma-name");
+      endTextDiploma = endScreen2.querySelector(".diploma-proud");
+      endTextName = game.stories[56].text;
+      endTextDiploma = game.stories[55].text;
+
 
 
       console.log('well done, diploma');
@@ -202,14 +209,31 @@ function main() {
 
   function buildEndScreen2() {
     endScreen2 = buildDom(
-      `
-      <div class="end2view">
-
-    
+    `
+      <div class="container-final">
+      <div class="diploma-main-top">
+        <img src="images/IHLOGO.png" alt="" class="logo" />
+        <p class="diploma-name">Your name here</p>
       </div>
-      <article>
-      <p class="copyright">Thanks for playing. This game was made with love at IronHack</p>
-      </article>
+      <div class="diploma-text">
+        <p>
+          Congratulations for completing the IronHack Bootcamp, you have
+          showed great expertise, relentlessness and true passion for coding.
+        </p>
+        <p>
+          We are proud of you, now go out there and kick some ass
+          (figuratively speaking).
+        </p>
+        <p class= "diploma-proud">
+          Make us proud. And never forget to drink enough water.
+        </p>
+      </div>
+      <div class="footer">
+        <p class="copyright">
+          Thanks for playing. This game was made with &#10084; at IronHack
+        </p>
+      </div>
+    </div>
       `
     );
 
@@ -233,4 +257,4 @@ function main() {
 }
 
 //this is so it loads game when the page is finished loading
-// window.addEventListener("load", main);
+window.addEventListener("load", main);
