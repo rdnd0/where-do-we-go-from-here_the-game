@@ -125,3 +125,39 @@ article{
 #name:focus{
   outline-color: pink;
 }
+
+
+.container-final{
+  border-color: pink;
+  border-style: double;
+  border-width: 1rem;
+  width: 100%;
+}
+
+.copyright{
+  font-size: 0.8rem;
+  font-family: 'Baloo Thambi', cursive;
+  text-align: center;
+}
+
+.diploma-main-top{
+  max-height: 30vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding-top: 9vh;
+}
+
+.diploma-name{
+  background-color: pink;
+}
+
+.logo {
+  height: 30vh;
+}
+
+.diploma-text{
+  margin: 5rem 5rem;
+}

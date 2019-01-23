@@ -6,6 +6,7 @@ function main() {
   var splashScreen;
   var gameScreen;
   var endScreen;
+  var endScreen2;
   var img;
   var mainText;
   var option1Text;
@@ -162,11 +163,8 @@ function main() {
     }
     else if (game.storyPosition === 51) {
       destroyGameScreen();
-      buildEndScreen();
-      endText = endScreen.querySelector(".maintext");
-      endImg = endScreen.querySelector(".image");
-      endImg.src = game.images[55];
-      endText.innerText = "";
+      buildEndScreen2();
+
 
       console.log('well done, diploma');
     }
@@ -202,6 +200,21 @@ function main() {
     endScreen.querySelector("#restart").addEventListener("click", restartGame);
   }
 
+  function buildEndScreen2() {
+    endScreen2 = buildDom(
+      `
+      <div class="end2view">
+
+    
+      </div>
+      <article>
+      <p class="copyright">Thanks for playing. This game was made with love at IronHack</p>
+      </article>
+      `
+    );
+
+  }
+
   function destroyEndScreen() {
     destroyDom(endScreen);
   }
@@ -220,4 +233,4 @@ function main() {
 }
 
 //this is so it loads game when the page is finished loading
-window.addEventListener("load", main);
+// window.addEventListener("load", main);
