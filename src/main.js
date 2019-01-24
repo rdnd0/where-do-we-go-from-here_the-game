@@ -168,8 +168,8 @@ function main() {
       buildEndScreen2();
       endTextName = endScreen2.querySelector(".diploma-name");
       endTextDiploma = endScreen2.querySelector(".diploma-proud");
-      endTextName = game.stories[56].text;
-      endTextDiploma = game.stories[55].text;
+      endTextName.innerText = game.stories[56].text;
+      endTextDiploma.innerText = game.stories[55].text;
 
 
 
