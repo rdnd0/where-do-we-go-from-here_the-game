@@ -76,9 +76,9 @@ article{
   padding: 1rem;
   min-height: 4rem;
   font-family: 'Baloo Thambi', cursive;
-  /* font-family: 'Gaegu', cursive; */
   font-size: 1rem;
   text-align: left;
+  min-width: 45vw;
 
 }
 
