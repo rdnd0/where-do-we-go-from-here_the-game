@@ -221,11 +221,11 @@ function main() {
           showed great expertise, relentlessness and true passion for coding.
         </p>
         <p>
-          We are proud of you, now go out there and kick some ass
+          We are proud of you, now get out there and kick some ass
           (figuratively speaking).
         </p>
         <p class= "diploma-proud">
-          Make us proud. And never forget to drink enough water.
+          Make us proud. And never forget to hydrate yourself.
         </p>
       </div>
       <div class="footer">

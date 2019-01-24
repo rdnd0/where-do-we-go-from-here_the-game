@@ -72,9 +72,9 @@ function Game(playername){
   var story23 = new Story();
   var story24 = new Story();
   var story25 = new Story(
-    `As you come through the door you see it, all your wonderful colleagues pop out from under the table and say: "Congratulations ${this.playerName} you are so close, you are about to graduate from IronHack... Only one question to go, in which naming convention is this written? 
+    `As you come through the door you see it, all your wonderful colleagues pop out from under the table and say: "Congratulations ${this.playerName} you are so close, you are about to graduate from IronHack... Only one question to go, in which naming convention is this written?
     camel_case 
-    We need an answer is all or nothing at this point.`,
+    We need an answer is all or nothing at this point."`,
     `This is clearly camel case, I use it all the time`,
     `This is snake case and I love this notation, even if I am afraid of snakes`
   );
@@ -108,7 +108,7 @@ function Game(playername){
   var endFaint = new Story(
     `${this.playerName}, you ain't going nowhere with that attitude! Sorry, you are out.`);
   var endDrown = new Story(
-    `There's been a problem with the plumbing, there is water everywhere... Floki seems to be ok swimming around, but I do not know how to. You pass away of terrible death, suffering like ever in your life.`);
+    `There's been a problem with the plumbing, there is water everywhere... Floki seems to be ok swimming around, but you do not know how to. You pass away of terrible death, suffering like ever in your life. Sorry, life sucks sometimes.`);
   var endBluck = new Story(
       `C'mon ${this.playerName}! It is actually snake case, what were you thinking? 
       That automatically puts you back into square UNO. See you in the next cohort. (Just to be clear, you will have to pay that).`);
