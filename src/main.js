@@ -127,7 +127,6 @@ function main() {
       endImg.src = game.images[52]//need to select image for faint end
       endText.innerText = game.stories[52].text;//need to select text for faint end
     } else if (game.storyPosition === 14) {
-      console.log('back to story 6')
       game.storyPosition = 6;
       game.updateStoryStep();
       img.src = game.currentImage;
@@ -135,7 +134,6 @@ function main() {
       option1Text.innerText = game.currentOpt1;
       option2Text.innerHTML = game.currentOpt2;
     } else if (game.storyPosition === 26) {
-      console.log('back to story 12')
       game.storyPosition = 12;
       game.updateStoryStep();
       img.src = game.currentImage;
@@ -151,7 +149,6 @@ function main() {
       endImg = endScreen.querySelector(".image");
       endImg.src = game.images[53];
       endText.innerText = game.stories[53].text;
-      console.log("drowming end");
     }
     else if (game.storyPosition === 50) {
       //code for end 3, try again next time
@@ -161,7 +158,6 @@ function main() {
       endImg = endScreen.querySelector(".image");
       endImg.src = game.images[54];
       endText.innerText = game.stories[54].text;
-      console.log('try again next time');
     }
     else if (game.storyPosition === 51) {
       destroyGameScreen();
@@ -170,10 +166,6 @@ function main() {
       endTextDiploma = endScreen2.querySelector(".diploma-proud");
       endTextName.innerText = game.stories[56].text;
       endTextDiploma.innerText = game.stories[55].text;
-
-
-
-      console.log('well done, diploma');
     }
     else {
       game.updateStoryStep();
